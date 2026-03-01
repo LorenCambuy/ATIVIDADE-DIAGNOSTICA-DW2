@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= initial-scale=1.0">
+    <title>Atividade Diagnóstica - Desenvolvimento WEB II</title>
+
+    <!-- biblioteca para a barra de navegação-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!--chamando o CSS e JAVA SCRIPT-->
+    <link rel="stylesheet" href="css/estilo.css">
+    <script src="js/script.js"></script>
+
+</head>
+<body>
+        <!--barra de navegação--> <!-- <i> icone--> <!--bootstrap para os icones -->
+        <nav class="barra_nav"> 
+            <button class="icones" onclick="alert('Perdoe-me! Site em desenvolvimento')"><i class="bi bi-house"></i></button> <!--Casinha--> 
+            <button class="icones" onclick="alert('Perdoe-me! Site em desenvolvimento')"><i class="bi bi-search"></i></button> <!--Lupa--> 
+            <button class="icones" onclick="alert('Perdoe-me! Site em desenvolvimento')"><i class="bi bi-plus-lg"></i></button> <!--Adicionar--> 
+            <button class="icones" onclick="alert('Perdoe-me! Site em desenvolvimento')"><i class="bi bi-person"></i></button> <!--Perfil-->
+         </nav>
+        
+    <!--div abrangendo todo conteudo da pagina-->
+    <div class="conteudo_principal">    
+
+        <!--Cabecalho-->
+        <header class="perfil"> 
+
+            <div class="dados_usuario"> <!--div para organizar as imagens, dados e botao-->
+                <img src="img/img1.jpg" alt="Foto do perfil" class="foto">
+
+                <div class="informacoes_publicas">
+                    <label class="nome">Loren Cambuy</label>
+                    <label class="usuario">@lorencambuy</label>
+                </div>
+
+                <button class="botao_editar" onclick="alert('Perdoe-me! Site em desenvolvimento')">Editar Perfil</button>
+            </div>
+            
+            <form class="form_post"> <!---Formulario para comentarios-->
+                <label for="comentario"></label>
+                <textarea id="comentario" name="comentario" class= "comentario" placeholder="Quais são as novidades?"></textarea>
+
+                <button type="submit" class="botao_publicar" onclick="alert('Perdoe-me! Site em desenvolvimento')">Publicar</button>
+            </form>
+
+        </header> 
+
+        <!--meio da pagina-->
+        <main> 
+
+            <section class="postagens">
+
+                <div class="post"> <!--div para organizar o post de forma separada e manter o padrao-->
+
+                    <div class="informacoes_post"> <!--dados principais do post-->
+                        <img src="img/img2.jpg" alt="Foto de perfil" class="foto">
+                        <label class="nome">Duda Nascimento</label>
+                        <label class="usuario">@duda_anascimento</label>
+                    </div>
+
+                    <label class="comentario">Se a vida te der limões, faça uma caipirinha!</label>
+
+                    <div class="reacoes"> <!--botoes de curtir e comentar-->
+
+                        <button class="reacao" onclick="alert('Perdoe-me! Site em desenvolvimento')"> <!--onclick para aviso-->
+                            <i class="bi bi-heart"></i> <!--chamando a biblioteca de itens-->
+                            <span class="contador">8 curtidas</span> <!--simulando os numeros de curtidas-->
+                        </button>
+
+                        <button class="reacao" onclick="toggleComentario(this)">  
+                            <i class="bi bi-chat"></i> <!--chamando a biblioteca de itens-->
+                        <span class="contador">2 comentários</span> <!--simulando os numeros de curtidas-->
+                        </button>
+
+                    </div>
+
+                    <div class="area_comentario"> <!--area de comentários-->
+
+                        <form class="form_post"> <!--utilizando a mesma class para os comentários-->
+                            <textarea class="comentario" placeholder="Escreva um comentário..."></textarea>
+                            <button type="button" class="botao_publicar">Comentar</button>
+                        </form>
+
+                    </div>
+
+                </div>
+
+                <div class="post"> <!--div para organizar o post de forma separada e manter o padrao-->
+
+                    <div class="informacoes_post"> <!--dados principais do post-->
+                        <img src="img/img3.jpg" alt="Foto de perfil" class="foto">
+                        <label class="nome">Nathália Michelly</label>
+                        <label class="usuario">@nathaliamichelly</label>
+                    </div>
+
+                    <label class="comentario">Hoje o dia está cinza como meu humor.</label>
+
+                   <div class="reacoes">
+                        <button class="reacao" onclick="alert('Perdoe-me! Site em desenvolvimento')"> <!--onclick para aviso-->
+                            <i class="bi bi-heart"></i> <!--chamando a biblioteca de itens-->
+                            <span class="contador">7 curtidas</span> <!--simulando os numeros de curtidas-->
+                        </button>
+
+                        <button class="reacao" onclick="toggleComentario(this)">  
+                            <i class="bi bi-chat"></i> <!--chamando a biblioteca de itens-->
+                        <span class="contador">9 comentários</span> <!--simulando os numeros de curtidas-->
+                        </button>
+                    </div>
+
+                    <div class="area_comentario"> <!--area de comentários-->
+                        <form class="form_post"> <!--utilizando a class para os comentários-->
+                            <textarea class="comentario" placeholder="Escreva um comentário..."></textarea>
+                            <button type="button" class="botao_publicar">Comentar</button>
+                        </form>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main> 
+
+    </div> <!--div de todo o conteudo-->
+
+</body>
+</html>
